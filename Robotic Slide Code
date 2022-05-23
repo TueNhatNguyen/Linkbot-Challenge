@@ -1,1 +1,32 @@
+//2015 Division 1 - Robotic Slide (40 pts)
 
+#include<linkbot.h>
+CLinkbotI robot1;
+
+double radius = 1.75;
+double trackwidth = 3.69;
+double speed = 4.00;
+
+robot1.setSpeed(speed, radius);
+robot1.turnRight(90, radius, trackwidth);
+robot1.driveDistance(3.69, radius);
+robot1.delaySeconds(0.25);
+robot1.driveDistance(3.69, radius);
+robot1.turnLeft(90, radius, trackwidth);
+robot1.delaySeconds(2);
+
+robot1.turnLeft(90, radius, trackwidth);
+robot1.driveDistance(3.69, radius);
+robot1.delaySeconds(0.25);
+robot1.driveDistance(3.69, radius);
+robot1.turnRight(90, radius, trackwidth);
+robot1.delaySeconds(2);
+
+robot1.driveDistance(-3.69, radius);
+robot1.delaySeconds(2);
+robot1.setLEDColor("red");
+
+robot1.driveDistance(3.69, radius);
+robot1.delaySeconds(2);
+robot1.turnLeft(90, radius, trackwidth);
+robot1.setLEDColor("blue");
